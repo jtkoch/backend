@@ -26,7 +26,7 @@ exports.seed = async function(knex) {
     },
     {
       user_id: 2,
-      title: "Post1",
+      title: "Post2",
       body: "After Ecuador I moved to Mexico City, What a lovely place",
       img_url: "https://unsplash.com/photos/KbR06h9dNQw"
     }
