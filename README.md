@@ -1,6 +1,6 @@
 # Expat Journal - Back End Code Base
 
-****A social media app for expats and travelers to connect and share experiences with each other. ****
+* A social media app for expats and travelers to connect and share experiences with each other.
 
 
 ## GETTING STARTED
@@ -17,16 +17,16 @@
 
 ## API 
 
-## /--------------------------------------------/ AUTH ROUTES /-----------------------------------/
- - POST ```/api/auth/register```
+## AUTH ROUTES
+ ### POST ```/api/auth/register```
   - Returns the newly created user object
   - Your request body must include a Username, Password, first name, last name, and email address
 
- - POST ```/api/auth/login```
+ ### POST ```/api/auth/login```
   - Returns the user (if found and valid) along with a JSON Web token.
   - Your request body must include the name, password.
 
-## /-------------------------------------------/ ENDPOINTS /--------------------------------------/**  
+## ENDPOINTS
 |    METHOD    |        ROUTE         | RESTRICTED |
 |--------------|----------------------|------------|
 |     POST     | /api/auth/register   |    NO      |
