@@ -1,12 +1,12 @@
-###### Expat Journal - Back End Code Base
+# Expat Journal - Back End Code Base
 
 ****A social media app for expats and travelers to connect and share experiences with each other. ****
 
 
-****GETTING STARTED ****
+## GETTING STARTED
   - This is a set of instructions for you to get a copy of the project up and running on your local machine for development and testing purposes. Below are some notes on how to deploy and install   the project on your machine. 
 
-****INSTALLATION ****
+## INSTALLATION
   - first cd into the server folder and install dependencies with:
   ```npm install```
 
@@ -15,9 +15,9 @@
   
 
 
-****API ****
+## API 
 
-**/--------------------------------------------/ AUTH ROUTES /-----------------------------------/**
+## /--------------------------------------------/ AUTH ROUTES /-----------------------------------/
  - POST ```/api/auth/register```
   - Returns the newly created user object
   - Your request body must include a Username, Password, first name, last name, and email address
@@ -26,7 +26,7 @@
   - Returns the user (if found and valid) along with a JSON Web token.
   - Your request body must include the name, password.
 
-**/-------------------------------------------/ ENDPOINTS /--------------------------------------/**  
+## /-------------------------------------------/ ENDPOINTS /--------------------------------------/**  
 |    METHOD    |        ROUTE         | RESTRICTED |
 |--------------|----------------------|------------|
 |     POST     | /api/auth/register   |    NO      |
@@ -41,3 +41,4 @@
 |     POST     | /api/posts           |    YES     |
 |     PUT      | /api/posts/:id       |    YES     |
 |     DELETE   | /api/posts/:id       |    YES     |
+
