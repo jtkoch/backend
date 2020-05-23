@@ -11,16 +11,28 @@ const postsRouter = require("../posts/posts-router.js")
 const server = express()
 
 server.use(express.json())
+server.use(logger)
 server.use(cors())
 server.use(helmet())
 
 //routes
-server.use("/api/users", restricted, usersRouter)
-server.use("/api/auth", authRouter)
-server.use("/api/posts", restricted, postsRouter)
+server.use("/api/users", logger, restricted, usersRouter)
+server.use("/api/auth", logger, authRouter)
+server.use("/api/posts", logger, restricted, postsRouter)
 
 server.get("/", (req, res) =>{
     res.status(200).json({message: "Welcome to the Expat-Journal API"})
 })
 
 module.exports = server
+
+// logger middleware
+function logger(req, res, next) {
+    console.log(
+      `[${new Date().toISOString()}] ${req.method} to ${req.url} from ${req.get(
+        'Origin'
+      )}`
+    );
+  
+    next();
+  }
