@@ -20,7 +20,7 @@ server.use("/api/auth", authRouter)
 server.use("/api/posts", restricted, postsRouter)
 
 server.get("/", (req, res) =>{
-    res.status(200).json({message: "Welcome to the API"})
+    res.status(200).json({message: "Welcome to the Expat-Journal API"})
 })
 
 module.exports = server
