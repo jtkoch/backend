@@ -17,7 +17,7 @@
 
 ## API 
 
-## BASEURL: ```this will be the heroku url when it is hosted```
+#### BASEURL: ```https://expat-journal-backend-jensen.herokuapp.com```
 
 ## ENDPOINTS
 |    METHOD    |        ROUTE         | RESTRICTED |
