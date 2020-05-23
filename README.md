@@ -17,14 +17,7 @@
 
 ## API 
 
-## AUTH ROUTES
- ### POST ```/api/auth/register```
-  - Returns the newly created user object
-  - Your request body must include a Username, Password, first name, last name, and email address
-
- ### POST ```/api/auth/login```
-  - Returns the user (if found and valid) along with a JSON Web token.
-  - Your request body must include the name, password.
+## BASEURL: ```this will be the heroku url when it is hosted```
 
 ## ENDPOINTS
 |    METHOD    |        ROUTE         | RESTRICTED |
@@ -42,3 +35,50 @@
 |     PUT      | /api/posts/:id       |    YES     |
 |     DELETE   | /api/posts/:id       |    YES     |
 
+## AUTH ROUTES
+  ### POST ```/api/auth/register```
+    - Returns the newly created user object
+    - Your request body must include a Username, Password, first name, last name, and email address
+
+  ### POST ```/api/auth/login```
+    - Returns the user (if found and valid) along with a JSON Web token
+    - Your request body must include the name, password
+
+## USER ROUTES
+  ### GET ```/api/users```
+    - Returns an array of all the users in the database
+
+  ### GET ```/api/users/:id```     
+    - Returns username, password, first_name, last_name, and email of the user by ID
+    - The ID should be in the request parameters
+
+  ### GET ```/api/users/:id/posts```
+    - Returns posts of specified user by ID
+
+  ### PUT ```/api/users/:id```  
+    - Returns an updated user object
+    - The ID should be in the request parameters
+    - Response of "success": "updated", and ID of the user that was updated
+
+  ### DELETE ```/api/users/:id```  
+    - Response of "success": "deleted", and ID of the user that was deleted
+
+## POSTS ROUTES
+  ### GET ```/api/posts```
+    - Returns an array of all the posts in the database    
+
+  ### GET ```/api/posts/:id```  
+    - Returns user_id, title, body, and img_url
+    - The ID should be in the request parameters
+
+  ### POST ```/api/posts``` 
+    - Creates a new user post to the specified user ID in the request body
+    - Response of "success": "You have successfully created a new post"
+
+  ### PUT ```/api/posts/:id```
+    - Returns an updated posts object
+    - The ID should be in the request parameters  
+    - Response of "success": "updated", and ID of the post that was updated
+
+  ### DELETE ```/api/posts/:id```
+    - Response of "success": "deleted", and ID of the post that was deleted
