@@ -38,11 +38,11 @@
 ## AUTH ROUTES
   ### POST ```/api/auth/register```
     - Returns the newly created user object
-    - Your request body must include a Username, Password, first name, last name, and email address
+    - Your request body must include a username, password, first_name, last_name, and email address
 
   ### POST ```/api/auth/login```
     - Returns the user (if found and valid) along with a JSON Web token
-    - Your request body must include the name, password
+    - Your request body must include the username, password
 
 ## USER ROUTES
   ### GET ```/api/users```
