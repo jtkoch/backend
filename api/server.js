@@ -3,7 +3,6 @@ const helmet = require("helmet")
 const cors = require("cors")
 const restricted = require("../auth/restricted.js")
 
-//routers
 const usersRouter = require("../users/users-router.js")
 const authRouter = require("../auth/auth-router.js")
 const postsRouter = require("../posts/posts-router.js")
@@ -15,7 +14,6 @@ server.use(logger)
 server.use(cors())
 server.use(helmet())
 
-//routes
 server.use("/api/users", logger, restricted, usersRouter)
 server.use("/api/auth", logger, authRouter)
 server.use("/api/posts", logger, restricted, postsRouter)
@@ -26,7 +24,6 @@ server.get("/", (req, res) =>{
 
 module.exports = server
 
-// logger middleware
 function logger(req, res, next) {
     console.log(
       `[${new Date().toISOString()}] ${req.method} to ${req.url} from ${req.get(
